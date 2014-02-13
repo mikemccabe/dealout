@@ -1,5 +1,7 @@
 dealout = 'deal out' input lines into n (concatentated) piles.
 
+dealout is an awk script, so you can set n on the command line.
+
 Example:
 
 dealout n=2 input
