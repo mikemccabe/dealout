@@ -27,7 +27,6 @@ BEGIN {
     slot = ((NR - 1) % n) + 1
     if (slot == 1) {
         deal += 1
-        print
     }
     slots[deal, slot] = $0
 }
