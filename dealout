@@ -1,0 +1,42 @@
+#!/usr/bin/env awk -f
+# dealout = 'deal out' input lines into n (concatentated) piles.
+#
+# Example:
+# dealout n=2 input
+# ... where input is
+# a1
+# a2
+# b1
+# b2
+# c1
+# will produce this output:
+# a1
+# b1
+# c1
+# a2
+# b2
+#
+# 'n' defaults to 10.
+
+
+BEGIN {
+    n=10
+    deal=0
+}
+{
+    slot = ((NR - 1) % n) + 1
+    if (slot == 1) {
+        deal += 1
+        print
+    }
+    slots[deal, slot] = $0
+}
+END {
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= deal; j++) {
+            if ((j, i) in slots) {
+                print slots[j, i]
+            }
+        }
+    }
+}
