@@ -1,4 +1,4 @@
-#!/usr/bin/env awk -f
+#!/usr/bin/awk -f
 # dealout = 'deal out' input lines into n (concatentated) piles.
 #
 # Example:
