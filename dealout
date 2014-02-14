@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# dealout = 'deal out' input lines into n (concatentated) piles.
+# dealout = 'deal out' input lines into n (concatenated) piles.
 #
 # Example:
 # dealout n=2 input
